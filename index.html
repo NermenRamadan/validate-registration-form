@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+    }
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 400px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 6px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .error {
+      color: crimson;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+    }
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 6px;
+    }
+    button {
+      background-color: navy;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      width: 100%;
+    }
+    #outputcontainer {
+      margin-top: 20px;
+    }
+    #outputcontainer textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="form">
+    <h2>Registration Form</h2>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Enter your username">
+    <div class="hint">Username must be 6–12 characters</div>
+    <div class="error" id="usernameError"></div>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email">
+    <div class="error" id="emailError"></div>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your password">
+    <div class="hint">Password must include lowercase and uppercase letters</div>
+    <div class="error" id="passwordError"></div>
+
+    <label for="semester">Semester:</label>
+    <select id="semester">
+      <option value="">-- Select your semester --</option>
+      <option value="1">1st Semester</option>
+      <option value="2">2nd Semester</option>
+    </select>
+    <div class="error" id="semesterError"></div>
+
+    <label>Courses Taken:</label>
+    <div class="checkbox-group">
+      <label for="c102"><input type="checkbox" id="c102" name="courses">Comp 102</label>
+      <label for="c206"><input type="checkbox" id="c206" name="courses">Comp 206</label>
+      <label for="m101"><input type="checkbox" id="m101" name="courses">Math 101</label>
+    </div>
+
+    <button type="submit">Register</button>
+    <div id="outputcontainer"></div>
+  </form>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
